@@ -12,15 +12,11 @@ public class Book {
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO) //for autonumber
 	private int bookId;
-	@Column
-	private String title;
-	@Column
-	private String author;
-	@Column
-	private String description;
 	
-	@Column
-	private boolean archived;
+	@Column private String title;
+	@Column private String author;
+	@Column private String description;
+	@Column private boolean archived;
 	
 	public Book(){
 		
