@@ -15,15 +15,22 @@ public class BookServiceImpl implements BookService {
 	private BookDao bookDao;
 	
 	@Transactional
-	public void add(Book book) {
-		bookDao.add(book);
+	public void save(Book book) {
+		bookDao.save(book);
 	}
 
 	@Transactional
-	public void edit(Book book) {
-		bookDao.edit(book);
+	public void update(Book book) {
+		bookDao.update(book);
 	}
 
+	@Transactional
+	public void archive(int bookId) {
+		Book book = getBook(bookId);
+		book.setArchived(true);
+		update(book);
+	}
+	
 	@Transactional
 	public void delete(int bookId) {
 		bookDao.delete(bookId);

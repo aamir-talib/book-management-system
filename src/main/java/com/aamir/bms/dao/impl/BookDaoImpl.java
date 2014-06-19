@@ -15,12 +15,12 @@ public class BookDaoImpl implements BookDao {
 	private SessionFactory session;
 	
 	@Override
-	public void add(Book book) {
+	public void save(Book book) {
 		session.getCurrentSession().save(book);
 	}
 
 	@Override
-	public void edit(Book book) {
+	public void update(Book book) {
 		session.getCurrentSession().update(book);
 	}
 
@@ -28,7 +28,7 @@ public class BookDaoImpl implements BookDao {
 	public void delete(int bookId) {		
 		session.getCurrentSession().delete(getBook(bookId));
 	}
-
+	
 	@Override
 	public Book getBook(int bookId) {
 		return (Book)session.getCurrentSession().get(Book.class, bookId);

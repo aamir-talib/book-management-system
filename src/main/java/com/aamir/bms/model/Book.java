@@ -16,6 +16,11 @@ public class Book {
 	private String title;
 	@Column
 	private String author;
+	@Column
+	private String description;
+	
+	@Column
+	private boolean archived;
 	
 	public Book(){
 		
@@ -23,9 +28,9 @@ public class Book {
 	
 	public Book(int bookId, String title, String author) {
 		super();
-		this.bookId = bookId;
-		this.title = title;
-		this.author = author;
+		setBookId(bookId);
+		setTitle(title);
+		setAuthor(author);
 	}
 
 	public int getBookId() {
@@ -51,6 +56,20 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	
-	
+	public boolean isArchived() {
+		return archived;
+	}
+
+	public void setArchived(boolean archived) {
+		this.archived = archived;
+	}
 }
