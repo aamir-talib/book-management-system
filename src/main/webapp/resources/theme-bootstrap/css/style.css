@@ -91,6 +91,16 @@ textarea {
 	background-color: transparent;
 }
 
+.error-page{
+	text-align: center;
+	color: #ccc;
+}
+
+.error-page .error-code{
+	font-size: 200px;
+	color: #eee;
+}
+
 #footer {
 	width: 100%;
 	height: 20px;
