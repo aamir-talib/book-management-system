@@ -9,6 +9,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="<c:url value="/resources/images/favicon.png"/>" />
 		<title>BMS</title>
 		
 		<c:set var="req" value="${pageContext.request}" scope="request" />
@@ -90,7 +91,7 @@
 		    ================================================== -->
 			<!-- Placed at the end of the document so the pages load faster -->
 	
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script src="<c:url value="/resources/js/jquery-1.11.1.min.js" />"></script>
 			<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 		</div>
 	</body>
